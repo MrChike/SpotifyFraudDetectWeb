@@ -3,12 +3,14 @@ import Sidebar from "@/components/Sidebar";
 import "./globals.css";
 import { Figtree } from "next/font/google";
 import SupabaseProvider from "@/providers/SupabaseProvider";
+import UserProvider from "@/providers/UserProvider";
+import ModalProvider from "@/providers/ModalProvider";
 
 const font = Figtree({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Spotify Clone",
-  description: "Spotify Clone with Next.js"
+  description: "Spotify Clone with Next.js, Supabase & TypeScript."
 };
 
 export default function RootLayout({
@@ -20,7 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <SupabaseProvider>
-          <Sidebar>{children}</Sidebar>
+          <UserProvider>
+            <ModalProvider />
+            <Sidebar>{children}</Sidebar>
+          </UserProvider>
         </SupabaseProvider>
       </body>
     </html>
