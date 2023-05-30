@@ -2,8 +2,22 @@
 
 import { Database } from "@/types_db";
 
-interface SupabseProviderProps {
+import { useState } from "react";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { SessionContextProvider } from "@supabase/auth-helpers-react";
+
+interface SupabaseProviderProps {
   children: React.ReactNode;
 }
 
-const SupabseProvider: React.FC<SupabseProviderProps> = ({ children }) => {};
+const SupabaseProvider: React.FC<SupabaseProviderProps> = ({ children }) => {
+  const [supabaseClient] = useState(() =>
+    createClientComponentClient<Database>()
+  );
+
+  return (
+    <SessionContextProvider supabaseClient={supabaseClient}>
+      {children}
+    </SessionContextProvider>
+  );
+};
