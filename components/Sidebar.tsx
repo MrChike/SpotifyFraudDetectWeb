@@ -26,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
       {
         icon: BiSearch,
         label: "Search",
-        active: pathname !== "/search",
+        active: pathname === "/search",
         href: "/search"
       }
     ],
