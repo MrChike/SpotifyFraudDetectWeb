@@ -6,6 +6,7 @@ import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 
 import Box from "./Box";
+import SidebarItem from "./SidebarItem";
 
 interface SidebarProps {
   children: React.ReactNode;
@@ -14,7 +15,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ children }) => {
   const pathname = usePathname();
 
-  const route = useMemo(
+  const routes = useMemo(
     () => [
       {
         icon: HiHome,
@@ -46,7 +47,22 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
           p-2
         "
       >
-        <Box>Sidebar Navigation</Box>
+        <Box>
+          <div
+            className="
+              flex
+              flex-col
+              gap-y-4
+              px-5
+              py-4
+            "
+          >
+            {routes.map((route) => (
+              <SidebarItem key={route.label} {...route} />
+            ))}
+          </div>
+        </Box>
+        <Box className="overflow-y-auto h-full">Song Library</Box>
       </div>
     </div>
   );
