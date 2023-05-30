@@ -7,11 +7,11 @@ const font = Figtree({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Spotify Clone",
-  description: "Spotify Clone with Next.js",
+  description: "Spotify Clone with Next.js"
 };
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
