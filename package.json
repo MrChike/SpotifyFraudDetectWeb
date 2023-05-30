@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gen:dbtypes": "npx supabase gen types typescript --project-id enslclfxdhezohzcesvn --schema public > types_db.ts"
   },
   "dependencies": {
     "@types/node": "20.2.5",
