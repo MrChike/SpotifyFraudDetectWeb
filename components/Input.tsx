@@ -12,6 +12,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           className
         )}
         type={type}
+        disabled={disabled}
+        ref={ref}
+        {...props}
       />
     );
   }
