@@ -37,6 +37,17 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
     player.setId(nextSong);
   };
 
+  const onPlayPrevious = () => {
+    if (player.ids.length === 0) return;
+
+    const currentIndex = player.ids.findIndex((id) => id === player.activeId);
+    const previoustSong = player.ids[currentIndex - 1];
+
+    if (!previoustSong) return player.setId(player.ids[player.ids.length - 1]);
+
+    player.setId(previoustSong);
+  };
+
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 h-full">
       <div className="flex w-full justify-start">
@@ -58,7 +69,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
       <div className="hidden h-full md:flex justify-center items-center w-full max-w-[722px] gap-x-6">
         <AiFillStepBackward
           size={30}
-          onClick={() => {}}
+          onClick={onPlayPrevious}
           className="text-neutral-400 cursor-pointer hover:text-white transition"
         />
         <div
