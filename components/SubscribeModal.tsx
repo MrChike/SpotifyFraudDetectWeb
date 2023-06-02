@@ -44,7 +44,7 @@ const SubscribeModal: React.FC<SubscribeModalProps> = ({ products }) => {
 
     try {
       const { sessionId } = await postData({
-        url: "/api/created-checkout-session",
+        url: "/api/create-checkout-session",
         data: { price }
       });
 
