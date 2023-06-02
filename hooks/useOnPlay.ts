@@ -14,7 +14,8 @@ const useOnPlay = (songs: Song[]) => {
   const onPlay = (id: string) => {
     if (!user) return authModal.onOpen();
 
-    if (!subscription) return subscribeModal.onOpen();
+    // UnComment to Only Allow Subscribed User to Play Song.
+    // if (!subscription) return subscribeModal.onOpen();
 
     player.setId(id);
     player.setIds(songs.map((song) => song.id));

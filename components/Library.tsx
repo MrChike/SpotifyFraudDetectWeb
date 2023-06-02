@@ -28,6 +28,7 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
   const onClick = () => {
     if (!user) return authModal.onOpen();
 
+    // Only Subscribed User Can Upload Songs.
     if (!subscription) return subscribeModal.onOpen();
 
     return uploadModal.onOpen();
