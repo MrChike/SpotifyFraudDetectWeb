@@ -44,7 +44,7 @@ export interface Price {
 }
 
 export interface ProductWithPrice extends Product {
-  price?: Price[];
+  prices?: Price[];
 }
 
 export interface Subscription {
