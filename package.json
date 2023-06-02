@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "gen:dbtypes": "npx supabase gen types typescript --project-id enslclfxdhezohzcesvn --schema public > types_db.ts",
+    "stripe:login": "stripe login",
     "stripe:listen": "stripe listen --forward-to localhost:3000/api/webhooks"
   },
   "dependencies": {
