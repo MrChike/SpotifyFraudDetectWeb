@@ -1,11 +1,11 @@
-import { headers } from "next/headers";
-import { NextResponse } from "next/server";
 import Stripe from "stripe";
+import { NextResponse } from "next/server";
+import { headers } from "next/headers";
 
 import { stripe } from "@/libs/stripe";
 import {
-  upsertPriceRecord,
   upsertProductRecord,
+  upsertPriceRecord,
   manageSubscriptionStatusChange
 } from "@/libs/supabaseAdmin";
 
@@ -22,19 +22,18 @@ const relevantEvents = new Set([
 
 export async function POST(request: Request) {
   const body = await request.text();
-  const sig = headers().get("Stripes-Signature");
+  const sig = headers().get("Stripe-Signature");
 
-  const webhooksSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  const webhookSecret =
+    process.env.STRIPE_WEBHOOK_SECRET_LIVE ?? process.env.STRIPE_WEBHOOK_SECRET;
   let event: Stripe.Event;
 
   try {
-    if (!sig || !webhooksSecret) return;
-
-    event = stripe.webhooks.constructEvent(body, sig, webhooksSecret);
-  } catch (error: any) {
-    console.error("Error Message: " + error.message);
-
-    return new NextResponse(`Webhook Error: ${error.message}`, { status: 400 });
+    if (!sig || !webhookSecret) return;
+    event = stripe.webhooks.constructEvent(body, sig, webhookSecret);
+  } catch (err: any) {
+    console.error(`❌ Error Message: ${err.message}`);
+    return new NextResponse(`Webhook Error: ${err.message}`, { status: 400 });
   }
 
   if (relevantEvents.has(event.type)) {
@@ -74,7 +73,10 @@ export async function POST(request: Request) {
       }
     } catch (error) {
       console.error(error);
-      return new NextResponse("Webhook Error!", { status: 400 });
+      return new NextResponse(
+        'Webhook Error: "Webhook Handler Failed. View logs."',
+        { status: 400 }
+      );
     }
   }
 
