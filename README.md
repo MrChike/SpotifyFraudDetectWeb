@@ -1,34 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Full Stack Spotify Clone with Next.js 13.4 App Router: React, Tailwind, Supabase, PostgreSQL, Stripe & TypeScript
 
-## Getting Started
+Tutorial Followed: [Code With Antonio - Full Stack Spotify Clone](https://youtu.be/2aeMRB8LL4o)
+<br>
+Instructor: [Antonio Erdeljac](https://github.com/antonioerdeljac)
 
-First, run the development server:
+Key Features:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- Song upload
+- Stripe integration
+- Tailwind design for sleek UI
+- Tailwind animations and transition effects
+- Full responsiveness for all devices
+- Credential authentication with Supabase
+- Github authentication integration
+- File and image upload using Supabase storage
+- Client form validation and handling using react-hook-form
+- Server error handling with react-toast
+- Play song audio
+- Favorites system
+- Playlists / Liked songs system
+- Advanced Player component
+- Stripe recurring payment integration
+- POST, GET, and DELETE routes in route handlers (app/api)
+- Fetch data in server React components by directly accessing the database
+- Handling relations between Server and Child components in a real-time environment
+- Cancelling Stripe subscriptions
+
+### Prerequisites
+
+**Node version 14.x**
+
+### Cloning the repository
+
+```shell
+git clone https://github.com/nayak-nirmalya/spotify-clone.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+npm i
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Setup .env File
 
-## Learn More
+```js
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Add SQL Tables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Use `database.sql` file to create songs and liked_songs table in Supabase.
 
-## Deploy on Vercel
+### Start the App
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```shell
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Available commands
+
+Running commands with npm `npm run [command]`
+
+| command         | description                                         |
+| :-------------- | :-------------------------------------------------- |
+| `dev`           | Starts a development instance of the app            |
+| `build`         | Starts a building final version for production      |
+| `start`         | Run final production build version                  |
+| `lint`          | Run lint check as configured in .eslintrc.json file |
+| `gen:dbtypes`   | Generate Types for Databases                        |
+| `stripe:login`  | Login to Stripe from stripe-cli                     |
+| `stripe:listen` | Listen to Webhooks for Stripe Events                |
