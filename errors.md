@@ -158,4 +158,66 @@ added 3 packages in 8s
 
 157 packages are looking for funding
   run `npm fund` for details
+
+
+mrchike@practice:~/code/contributions/spotify$ rm -rf node_modules/
+mrchike@practice:~/code/contributions/spotify$ npm install
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm notice Beginning October 4, 2021, all connections to the npm registry - including for package installation - must use TLS 1.2 or higher. You are currently using plaintext http to connect. Please visit the GitHub blog for more information: https://github.blog/2021-08-23-npm-registry-deprecating-tls-1-0-tls-1-1/
+npm warn deprecated glob@7.1.7: Glob versions prior to v9 are no longer supported
+npm warn deprecated @supabase/auth-helpers-shared@0.4.1: This package is now deprecated - please use the @supabase/ssr package instead.
+npm warn deprecated @supabase/auth-helpers-react@0.4.2: This package is now deprecated - please use the @supabase/ssr package instead.
+npm warn deprecated @supabase/auth-helpers-nextjs@0.7.4: This package is now deprecated - please use the @supabase/ssr package instead.
+npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+npm warn deprecated @humanwhocodes/config-array@0.11.14: Use @eslint/config-array instead
+npm warn deprecated eslint@8.41.0: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 479 packages in 2m
+
+157 packages are looking for funding
+  run `npm fund` for details
+mrchike@practice:~/code/contributions/spotify$ npm run dev
+
+> spotify-clone@0.1.0 dev
+> next dev
+
+- ready started server on 0.0.0.0:3000, url: http://localhost:3000
+- info Loaded env from /home/mrchike/code/contributions/spotify/.env
+- event compiled client and server successfully in 4.6s (306 modules)
+- wait compiling...
+- wait compiling /middleware (client and server)...
+- event compiled client and server successfully in 2.8s (489 modules)
+- wait compiling /(site)/page (client and server)...
+- event compiled client and server successfully in 26s (1463 modules)
+- wait compiling...
+- event compiled successfully in 1769 ms (663 modules)
+{
+  code: 'PGRST002',
+  details: null,
+  hint: null,
+  message: 'Could not query the database for the schema cache. Retrying.'
+}
+relation "public.songs" does not exist
+relation "public.songs" does not exist
+{
+  code: 'PGRST200',
+  details: "Searched for a foreign key relationship between 'products' and 'prices' in the schema 'public', but no matches were found.",
+  hint: null,
+  message: "Could not find a relationship between 'products' and 'prices' in the schema cache"
+}
+{
+  code: 'PGRST200',
+  details: "Searched for a foreign key relationship between 'products' and 'prices' in the schema 'public', but no matches were found.",
+  hint: null,
+  message: "Could not find a relationship between 'products' and 'prices' in the schema cache"
+}
+
+-  ┌ GET / 200 in 17249ms
+   │
+   ├──── GET https://qsvhoikflicajoda../rest/v1/songs?select=*&order=.. 503 in 5594ms (cache: MISS)
+   │
+   ├──── GET https://qsvhoikflicajoda../rest/v1/songs?select=*&user_i.. 404 in 6512ms (cache: MISS)
+   │
+   └── 1 level ── GET https://qsvhoikflicajoda../rest/v1/products?select=*%2Cpric.. 400 in 255ms (cache: MISS)
 ```

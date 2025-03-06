@@ -56,7 +56,7 @@ STRIPE_WEBHOOK_SECRET=
 
 ### Add SQL Tables
 
-Use `database.sql` file to create songs and liked_songs table in Supabase.
+Copy the sql commands in `database.sql` file to create songs and liked_songs table in Supabase sql cli interface.
 
 ### Start the App
 
