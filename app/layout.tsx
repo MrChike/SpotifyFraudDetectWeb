@@ -10,9 +10,9 @@ import ModalProvider from "@/providers/ModalProvider";
 import ToasterProvider from "@/providers/ToasterProvider";
 
 import "./globals.css";
-import { Figtree } from "next/font/google";
+import { Roboto } from "next/font/google";
 
-const font = Figtree({ subsets: ["latin"] });
+const font = Roboto({ weight: '400', subsets: ["latin"] });
 
 export const metadata = {
   title: "Spotify Clone",

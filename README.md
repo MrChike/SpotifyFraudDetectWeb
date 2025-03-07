@@ -64,6 +64,11 @@ Copy the sql commands in `database.sql` file to create songs and liked_songs tab
 npm run dev
 ```
 
+## Access supabase via command line
+```shell
+npx supabase login
+```
+
 ## Available commands
 
 Running commands with npm `npm run [command]`
