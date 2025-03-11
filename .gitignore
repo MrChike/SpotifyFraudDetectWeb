@@ -37,3 +37,6 @@ next-env.d.ts
 
 #song-files
 /song-files
+
+.vscode
+.qodo

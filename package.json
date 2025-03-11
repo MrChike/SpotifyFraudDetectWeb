@@ -12,6 +12,7 @@
     "stripe:listen": "stripe listen --forward-to localhost:3000/api/webhooks"
   },
   "dependencies": {
+    "@next/font": "^14.2.15",
     "@radix-ui/react-dialog": "^1.0.4",
     "@radix-ui/react-slider": "^1.1.2",
     "@stripe/stripe-js": "^1.54.0",
@@ -20,9 +21,6 @@
     "@supabase/auth-ui-react": "^0.4.2",
     "@supabase/auth-ui-shared": "^0.1.6",
     "@supabase/supabase-js": "^2.24.0",
-    "@types/node": "20.2.5",
-    "@types/react": "18.2.7",
-    "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
     "bufferutil": "^4.0.9",
     "eslint": "8.41.0",
@@ -46,7 +44,15 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
-    "@types/uniqid": "^5.3.2",
+    "@types/json5": "^0.0.30",
+    "@types/node": "^22.13.9",
+    "@types/phoenix": "^1.6.6",
+    "@types/prop-types": "^15.7.14",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@types/scheduler": "^0.23.0",
+    "@types/uniqid": "^5.3.4",
+    "@types/ws": "^8.18.0",
     "stripe-cli": "^0.1.0",
     "supabase": "^1.226.4"
   }
