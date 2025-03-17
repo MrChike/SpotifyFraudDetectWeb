@@ -33,13 +33,13 @@ Key Features:
 ### Cloning the repository
 
 ```shell
-git clone https://github.com/nayak-nirmalya/spotify-clone.git
+git clone https://github.com/MrChike/SpotifyFraudDetectWeb.git
 ```
 
 ### Install packages
 
 ```shell
-npm i
+npm install
 ```
 
 ### Setup .env File
@@ -56,7 +56,7 @@ STRIPE_WEBHOOK_SECRET=
 
 ### Add SQL Tables
 
-Copy the sql commands in `database.sql` file to create songs and liked_songs table in Supabase sql cli interface.
+Copy the sql commands found in `database.sql` file to create songs and liked_songs table in Supabase sql cli interface. `https://supabase.com/`
 
 ### Start the App
 
@@ -67,6 +67,7 @@ npm run dev
 ## Access supabase via command line
 ```shell
 npx supabase login
+npx supabase gen types typescript --project-id [Your Supabase Project ID] --schema public > database.types.ts
 ```
 
 ## Available commands
@@ -79,6 +80,3 @@ Running commands with npm `npm run [command]`
 | `build`         | Starts a building final version for production      |
 | `start`         | Run final production build version                  |
 | `lint`          | Run lint check as configured in .eslintrc.json file |
-| `gen:dbtypes`   | Generate Types for Databases                        |
-| `stripe:login`  | Login to Stripe from stripe-cli                     |
-| `stripe:listen` | Listen to Webhooks for Stripe Events                |
