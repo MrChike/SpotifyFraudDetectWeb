@@ -15,7 +15,7 @@ import { Roboto } from "next/font/google";
 const font = Roboto({ weight: '400', subsets: ["latin"] });
 
 export const metadata = {
-  title: "Spotify Clone",
+  title: "Spotify (Fraud Detection)",
   description: "Spotify Clone with Next.js, Supabase & TypeScript."
 };
 

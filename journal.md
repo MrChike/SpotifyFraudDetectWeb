@@ -6,6 +6,7 @@
 
 ```bash
 npx supabase login
+npx supabase gen types typescript --project-id Your Supabase Project ID --schema public > database.types.ts
 ```
 
 07/03/2025
