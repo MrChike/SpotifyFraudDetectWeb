@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 // domains: ["enslclfxdhezohzcesvn.supabase.co"]
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+let supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+supabaseUrl = supabaseUrl.split("//")[1];
 
 const nextConfig = {
   images: {

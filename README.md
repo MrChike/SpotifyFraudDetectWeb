@@ -4,6 +4,9 @@ Tutorial Followed: [Code With Antonio - Full Stack Spotify Clone](https://youtu.
 <br>
 Instructor: [Antonio Erdeljac](https://github.com/antonioerdeljac)
 
+
+![Gallery](public/images/spotify_gallery.png)
+
 Key Features:
 
 - Song upload
@@ -58,16 +61,16 @@ STRIPE_WEBHOOK_SECRET=
 
 Copy the sql commands found in `database.sql` file to create songs and liked_songs table in Supabase sql cli interface. `https://supabase.com/`
 
-### Start the App
-
-```shell
-npm run dev
-```
-
 ## Access supabase via command line
 ```shell
 npx supabase login
 npx supabase gen types typescript --project-id [Your Supabase Project ID] --schema public > database.types.ts
+```
+
+### Start the App
+
+```shell
+npm run dev
 ```
 
 ## Available commands

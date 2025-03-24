@@ -220,4 +220,29 @@ relation "public.songs" does not exist
    ├──── GET https://qsvhoikflicajoda../rest/v1/songs?select=*&user_i.. 404 in 6512ms (cache: MISS)
    │
    └── 1 level ── GET https://qsvhoikflicajoda../rest/v1/products?select=*%2Cpric.. 400 in 255ms (cache: MISS)
+
+
+   mrchike@practice:~/code/contributions/spotify$ npm install stripe
+npm notice Beginning October 4, 2021, all connections to the npm registry - including for package installation - must use TLS 1.2 or higher. You are currently using plaintext http to connect. Please visit the GitHub blog for more information: https://github.blog/2021-08-23-npm-registry-deprecating-tls-1-0-tls-1-1/
+
+up to date in 3s
+
+158 packages are looking for funding
+  run `npm fund` for details
+mrchike@practice:~/code/contributions/spotify$ npm config set registry https://registry.npmjs.org/
+mrchike@practice:~/code/contributions/spotify$ npm config get registry
+https://registry.npmjs.org/
+mrchike@practice:~/code/contributions/spotify$ npm install stripe
+
+up to date, audited 574 packages in 28s
+
+158 packages are looking for funding
+  run `npm fund` for details
+
+3 vulnerabilities (2 moderate, 1 high)
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details
 ```

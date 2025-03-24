@@ -1,3 +1,15 @@
+## TODO
+
+* Set up on local and resolve all setup related issues ✅
+* Initial setup of backend microservice with django & spring
+* Browse through the video and fix the image display issue
+* Build the dashboard and integrate it into project
+* decouple connection from [frontend -> supabase] to [frontend -> backend -> supabase] NB: for the sake of MVP Launch in 3 Months to switch to purely [frontend -> backend] communication once live
+* Set up docker-compose for backend api communication
+* Introduce necessary technologies for project
+* Deploy to platform for user testing
+* set up unit testing and integration testing
+
 # Supabase Project Links
 
 * <https://supabase.com/dashboard/projects>

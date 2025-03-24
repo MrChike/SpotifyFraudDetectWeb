@@ -23,13 +23,16 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
   const uploadModal = useUploadModal();
   const { user, subscription } = useUser();
 
+  console.log('user------>', user);
+
   const onPlay = useOnPlay(songs);
 
   const onClick = () => {
     if (!user) return authModal.onOpen();
 
     // Only Subscribed User Can Upload Songs.
-    if (!subscription) return subscribeModal.onOpen();
+    // TODO: Figure out how the subsription works.
+    // if (!subscription) return subscribeModal.onOpen();
 
     return uploadModal.onOpen();
   };
