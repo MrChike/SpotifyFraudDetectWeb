@@ -2,7 +2,7 @@
 
 Frontend by: [Code With Antonio - Full Stack Spotify Clone](https://youtu.be/2aeMRB8LL4o) - [Antonio Erdeljac](https://github.com/antonioerdeljac)
 <br>
-Dashboard by: [Milos Dostanic](https://dostanic.net/portfolio/)
+Dashboard Design by: [Milos Dostanic](https://dostanic.net/portfolio/)
 
 
 ![Gallery](public/images/spotify_gallery.png)
