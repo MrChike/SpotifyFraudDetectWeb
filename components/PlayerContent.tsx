@@ -4,6 +4,9 @@ import React, { useEffect, useState } from "react";
 import { BsPauseFill, BsPlayFill } from "react-icons/bs";
 import { HiSpeakerWave, HiSpeakerXMark } from "react-icons/hi2";
 import { AiFillStepBackward, AiFillStepForward } from "react-icons/ai";
+import { IoShuffle } from "react-icons/io5";
+import { SlLoop } from "react-icons/sl";
+import { MdOutlineCloseFullscreen } from "react-icons/md";
 import useSound from "use-sound";
 
 import { Song } from "@/types";
@@ -21,7 +24,7 @@ interface PlayerContentProps {
 
 const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
   const player = usePlayer();
-  const [volume, setVolume] = useState(0.1);
+  const [volume, setVolume] = useState(0.50);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const Icon = isPlaying ? BsPauseFill : BsPlayFill;
@@ -47,6 +50,21 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
     if (!previoustSong) return player.setId(player.ids[player.ids.length - 1]);
 
     player.setId(previoustSong);
+  };
+
+  // TODO: To implement shuffle logic
+  const onPlayShuffle = () => {
+    return;
+  };
+
+  // TODO: To implement loop logic
+  const onPlayLoop = () => {
+    return;
+  };
+
+  // TODO: To implement FullScreen logic
+  const onClickFullScreen = () => {
+    return;
   };
 
   const [play, { pause, sound }] = useSound(songUrl, {
@@ -97,6 +115,11 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
       </div>
 
       <div className="hidden h-full md:flex justify-center items-center w-full max-w-[722px] gap-x-6">
+        <IoShuffle 
+          size={30}
+          onClick={onPlayShuffle}
+          className="text-neutral-400 cursor-pointer hover:text-white transition"
+        />
         <AiFillStepBackward
           size={30}
           onClick={onPlayPrevious}
@@ -113,6 +136,11 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
           onClick={onPlayNext}
           className="text-neutral-400 cursor-pointer hover:text-white transition"
         />
+        <SlLoop 
+          size={23}
+          onClick={onPlayLoop}
+          className="text-neutral-400 cursor-pointer hover:text-white transition"
+        />
       </div>
 
       <div className="hidden md:flex w-full justify-end pr-2">
@@ -120,9 +148,11 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
           <VolumeIcon
             onClick={toggleMute}
             className="cursor-pointer"
-            size={34}
+            size={38}
           />
           <Slider value={volume} onChange={(value) => setVolume(value)} />
+          <span><MdOutlineCloseFullscreen onClick={onClickFullScreen} className="cursor-pointer" /></span>
+          
         </div>
       </div>
     </div>

@@ -2,8 +2,9 @@
 
 import React, { useMemo } from "react";
 import { usePathname } from "next/navigation";
-import { HiHome } from "react-icons/hi";
+import { SlSocialSpotify } from "react-icons/sl";
 import { BiSearch } from "react-icons/bi";
+import { RiDashboard3Line } from "react-icons/ri";
 import { twMerge } from "tailwind-merge";
 
 import Box from "./Box";
@@ -25,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
   const routes = useMemo(
     () => [
       {
-        icon: HiHome,
+        icon: SlSocialSpotify,
         label: "Home",
         active: pathname !== "/search",
         href: "/"
@@ -35,6 +36,13 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
         label: "Search",
         active: pathname === "/search",
         href: "/search"
+      },
+      {
+        icon: RiDashboard3Line,
+        label: "Dashboard",
+        // TODO: Create Dashboard Path
+        active: pathname === "/dashboard",
+        href: "/dashboard"
       }
     ],
     [pathname]

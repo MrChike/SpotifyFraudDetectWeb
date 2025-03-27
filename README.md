@@ -1,8 +1,8 @@
 # Full Stack Spotify Clone with Next.js 13.4 App Router: React, Tailwind, Supabase, PostgreSQL, Stripe & TypeScript
 
-Tutorial Followed: [Code With Antonio - Full Stack Spotify Clone](https://youtu.be/2aeMRB8LL4o)
+Frontend by: [Code With Antonio - Full Stack Spotify Clone](https://youtu.be/2aeMRB8LL4o) - [Antonio Erdeljac](https://github.com/antonioerdeljac)
 <br>
-Instructor: [Antonio Erdeljac](https://github.com/antonioerdeljac)
+Dashboard by: [Milos Dostanic](https://dostanic.net/portfolio/)
 
 
 ![Gallery](public/images/spotify_gallery.png)
