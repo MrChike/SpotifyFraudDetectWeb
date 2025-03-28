@@ -2,6 +2,7 @@
 
 * Set up on local and resolve all setup related issues ✅
 * Fix mail redirection issue with localhost:3000 ✅
+* Set up dashboard
 * Initial setup of backend microservice with django & spring
 * Browse through the video and fix the image display issue
 * Build the dashboard and integrate it into project
