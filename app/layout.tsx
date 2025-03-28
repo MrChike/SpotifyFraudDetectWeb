@@ -16,7 +16,7 @@ const font = Roboto({ weight: '400', subsets: ["latin"] });
 
 export const metadata = {
   title: "Spotify (Fraud Detection)",
-  description: "Spotify Clone with Next.js, Supabase & TypeScript."
+  description: "A Fraud Detection Streaming Platform"
 };
 
 export const revalidate = 0;

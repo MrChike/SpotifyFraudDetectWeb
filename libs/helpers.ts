@@ -1,14 +1,13 @@
 import { Price } from "@/types";
 
 export const getUrl = () => {
-  console.log('NEXT_PUBLIC_SITE_URL:', process.env.NEXT_PUBLIC_SITE_URL);
-  // console.log('NEXT_PUBLIC_VERCEL_URL:', process.env.NEXT_PUBLIC_VERCEL_URL);
 
   let url =
     process.env.NEXT_PUBLIC_SITE_URL ??
     process.env.NEXT_PUBLIC_VERCEL_URL ??
     "http://localhost:3000/";
 
+  console.log('url', url);
   url = url.includes("http") ? url : `https://${url}`;
   url = url.charAt(url.length - 1) === "/" ? url : `${url}/`;
 
